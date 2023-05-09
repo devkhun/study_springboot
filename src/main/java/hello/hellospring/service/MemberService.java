@@ -13,7 +13,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    // 외부에서 객체를 넣어주는것
+    // MemberRepository 객체를 새로 생성하는게 아니라 외부에서 MemberRepository 객체를 넣어주는것
     // 의존성 주입 (DI)
     public MemberService(MemoryMemberRepository memberRepository) {
         this.memberRepository = memberRepository;
