@@ -11,7 +11,13 @@ import java.util.Optional;
 // 해당 롤에 맞도록 명칭 설계
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    // 외부에서 객체를 넣어주는것
+    // 의존성 주입 (DI)
+    public MemberService(MemoryMemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원 가입
